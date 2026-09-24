@@ -1,0 +1,28 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+/*
+ * Tokens below mirror DESIGN.md §2/§3 exactly. Change values there first,
+ * then here — this file has no other source of truth.
+ */
+@theme {
+    --font-sans:
+        -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+    --color-ink: #1c1917;
+    --color-canvas: #fafaf9;
+    --color-surface: #ffffff;
+    --color-muted: #57534e;
+    --color-border: #e7e5e4;
+    --color-gold-700: #8a6a1f;
+    --color-gold-100: #f5e6c4;
+}
+
+@layer utilities {
+    .tabular-nums {
+        font-variant-numeric: tabular-nums;
+    }
+}
