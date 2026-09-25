@@ -4,7 +4,7 @@ A single local Laravel app simulating a gold product catalog, checkout with stoc
 
 ## Requirements
 
-- PHP 8.3–8.5 (developed on 8.4)
+- PHP 8.4 or newer
 - Composer 2.x
 - Node.js 18+ (for building the Tailwind/Alpine assets)
 - SQLite (default, zero setup) — or MySQL/PostgreSQL if you want to run the concurrency test against real row locking

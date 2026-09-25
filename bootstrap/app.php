@@ -14,6 +14,10 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
+        // Railway terminates TLS at its edge proxy and forwards the original
+        // scheme/host. Trust that proxy so route(), url(), and redirects stay https.
+        $middleware->trustProxies(at: '*');
+
         $middleware->alias([
             'mock-payment.token' => VerifyMockPaymentToken::class,
         ]);
